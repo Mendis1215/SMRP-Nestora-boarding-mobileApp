@@ -1,8 +1,14 @@
-import React, { useState, useEffect } from 'react';
-import { View, Text, StyleSheet, FlatList, TouchableOpacity, Alert, SafeAreaView, ActivityIndicator } from 'react-native';
+import React, { useState, useEffect, useContext } from 'react';
+import { View, Text, StyleSheet, FlatList, TouchableOpacity, Alert, SafeAreaView, ActivityIndicator, Platform } from 'react-native';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+import { AuthContext } from '../../context/AuthContext';
 import api from '../../services/api';
 
 export default function NotificationsScreen() {
+  const { user } = useContext(AuthContext);
+  const hiddenStorageKey = `hiddenNotifications_${user?._id || 'guest'}`;
+  const readStorageKey = `readNotifications_${user?._id || 'guest'}`;
+
   const [notifications, setNotifications] = useState([]);
   const [selectedNotification, setSelectedNotification] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
@@ -14,7 +20,22 @@ export default function NotificationsScreen() {
   const fetchNotifications = async () => {
     try {
       const response = await api.get('/notifications');
-      setNotifications(response.data.notifications);
+      const hiddenIdsRaw = await AsyncStorage.getItem(hiddenStorageKey);
+      const hiddenIds = hiddenIdsRaw ? JSON.parse(hiddenIdsRaw) : [];
+      
+      const readIdsRaw = await AsyncStorage.getItem(readStorageKey);
+      const readIds = readIdsRaw ? JSON.parse(readIdsRaw) : [];
+
+      const processed = response.data.notifications
+        .filter(n => !hiddenIds.includes(n._id))
+        .map(n => {
+          if (n.recipients === 'All Registered Students' && readIds.includes(n._id)) {
+            return { ...n, read: true };
+          }
+          return n;
+        });
+
+      setNotifications(processed);
     } catch (error) {
       console.error('Error fetching notifications:', error);
     } finally {
@@ -37,8 +58,18 @@ export default function NotificationsScreen() {
     
     if (!notification.read) {
       try {
-        await api.patch(`/notifications/${notification._id}/read`);
-        setNotifications(notifications.map(n =>
+        if (notification.recipients === 'All Registered Students') {
+          const readIdsRaw = await AsyncStorage.getItem(readStorageKey);
+          const readIds = readIdsRaw ? JSON.parse(readIdsRaw) : [];
+          if (!readIds.includes(notification._id)) {
+            readIds.push(notification._id);
+            await AsyncStorage.setItem(readStorageKey, JSON.stringify(readIds));
+          }
+        } else {
+          await api.patch(`/notifications/${notification._id}/read`);
+        }
+
+        setNotifications(prev => prev.map(n =>
           n._id === notification._id ? { ...n, read: true } : n
         ));
         setSelectedNotification({ ...notification, read: true });
@@ -48,29 +79,47 @@ export default function NotificationsScreen() {
     }
   };
 
-  const handleDelete = (id) => {
-    Alert.alert(
-      "Delete Notification",
-      "Are you sure you want to delete this notification?",
-      [
-        { text: "Cancel", style: "cancel" },
-        { 
-          text: "Delete", 
-          style: "destructive",
-          onPress: async () => {
-            try {
-              await api.delete(`/notifications/${id}`);
-              setNotifications(notifications.filter(n => n._id !== id));
-              if (selectedNotification && selectedNotification._id === id) {
-                setSelectedNotification(null);
-              }
-            } catch (error) {
-              console.error('Error deleting notification:', error);
-            }
-          }
+  const executeDelete = async (notification) => {
+    try {
+      if (notification.recipients === 'All Registered Students') {
+        const hiddenIdsRaw = await AsyncStorage.getItem(hiddenStorageKey);
+        const hiddenIds = hiddenIdsRaw ? JSON.parse(hiddenIdsRaw) : [];
+        if (!hiddenIds.includes(notification._id)) {
+          hiddenIds.push(notification._id);
+          await AsyncStorage.setItem(hiddenStorageKey, JSON.stringify(hiddenIds));
         }
-      ]
-    );
+      } else {
+        await api.delete(`/notifications/${notification._id}`);
+      }
+
+      setNotifications(prev => prev.filter(n => n._id !== notification._id));
+      if (selectedNotification && selectedNotification._id === notification._id) {
+        setSelectedNotification(null);
+      }
+    } catch (error) {
+      console.error('Error deleting notification:', error);
+    }
+  };
+
+  const handleDelete = (notification) => {
+    if (Platform.OS === 'web') {
+      if (window.confirm("Are you sure you want to delete this notification?")) {
+        executeDelete(notification);
+      }
+    } else {
+      Alert.alert(
+        "Delete Notification",
+        "Are you sure you want to delete this notification?",
+        [
+          { text: "Cancel", style: "cancel" },
+          { 
+            text: "Delete", 
+            style: "destructive",
+            onPress: () => executeDelete(notification)
+          }
+        ]
+      );
+    }
   };
 
   if (selectedNotification) {
@@ -92,7 +141,7 @@ export default function NotificationsScreen() {
           
           <TouchableOpacity 
             style={styles.deleteBtn}
-            onPress={() => handleDelete(selectedNotification._id)}
+            onPress={() => handleDelete(selectedNotification)}
           >
             <Text style={styles.deleteBtnText}>Delete Notification</Text>
           </TouchableOpacity>
@@ -136,7 +185,7 @@ export default function NotificationsScreen() {
               
               <TouchableOpacity 
                 style={styles.deleteIconBtn} 
-                onPress={() => handleDelete(item._id)}
+                onPress={() => handleDelete(item)}
               >
                 <Text style={styles.deleteIcon}>🗑️</Text>
               </TouchableOpacity>

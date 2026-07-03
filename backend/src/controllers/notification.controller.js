@@ -5,7 +5,12 @@ const getNotifications = async (req, res) => {
   try {
     let notifications;
     if (req.user.role === 'student') {
-      notifications = await Notification.find({ userId: req.user._id }).sort({ createdAt: -1 });
+      notifications = await Notification.find({
+        $or: [
+          { userId: req.user._id },
+          { recipients: 'All Registered Students' }
+        ]
+      }).sort({ createdAt: -1 });
     } else {
       // Owner sees all notifications they sent
       notifications = await Notification.find({ senderId: req.user._id }).sort({ createdAt: -1 });

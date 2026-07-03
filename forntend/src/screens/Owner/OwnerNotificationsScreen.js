@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { View, Text, StyleSheet, FlatList, TouchableOpacity, SafeAreaView, Alert, ActivityIndicator } from 'react-native';
+import { View, Text, StyleSheet, FlatList, TouchableOpacity, SafeAreaView, Alert, ActivityIndicator, Platform } from 'react-native';
 import { useFocusEffect } from '@react-navigation/native';
 import api from '../../services/api';
 
@@ -30,23 +30,31 @@ export default function OwnerNotificationsScreen({ navigation }) {
     }, [])
   );
 
+  const executeDelete = async (id) => {
+    try {
+      const res = await api.delete(`/notifications/${id}`);
+      setNotifications(prev => prev.filter(n => n._id !== id));
+      if (Platform.OS !== 'web') Alert.alert('Success', 'Notification deleted successfully');
+    } catch (error) {
+      console.error('Error deleting notification:', error);
+      if (Platform.OS !== 'web') Alert.alert('Error', error.response?.data?.error || 'Failed to delete notification');
+    }
+  };
+
   const handleDelete = (id) => {
-    Alert.alert('Delete Notification', 'Remove this notification?', [
-      { text: 'Cancel', style: 'cancel' },
-      {
-        text: 'Delete', style: 'destructive',
-        onPress: async () => {
-          try {
-            const res = await api.delete(`/notifications/${id}`);
-            setNotifications(notifications.filter(n => n._id !== id));
-            Alert.alert('Success', 'Notification deleted successfully');
-          } catch (error) {
-            console.error('Error deleting notification:', error);
-            Alert.alert('Error', error.response?.data?.error || 'Failed to delete notification');
-          }
+    if (Platform.OS === 'web') {
+      if (window.confirm("Remove this notification?")) {
+        executeDelete(id);
+      }
+    } else {
+      Alert.alert('Delete Notification', 'Remove this notification?', [
+        { text: 'Cancel', style: 'cancel' },
+        {
+          text: 'Delete', style: 'destructive',
+          onPress: () => executeDelete(id),
         },
-      },
-    ]);
+      ]);
+    }
   };
 
   const renderItem = ({ item }) => (

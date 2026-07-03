@@ -658,3 +658,60 @@
 {"_e":"metro:client_log","_t":1783092094463,"level":"warn","data":["\"shadow*\" style props are deprecated. Use \"boxShadow\"."]}
 {"_e":"metro:client_log","_t":1783092094463,"level":"log","data":["Running application \"main\" with appParams:\n","{\"hydrate\": undefined, \"rootTag\": \"#root\"}","\nDevelopment-level warnings: ON.\nPerformance optimizations: OFF."]}
 {"_e":"metro:client_log","_t":1783092094806,"level":"warn","data":["props.pointerEvents is deprecated. Use style.pointerEvents"]}
+{"_e":"metro:bundling:started","_t":1783093711650,"id":"8","platform":"web","environment":null,"entry":"node_modules\\expo\\AppEntry.js"}
+{"_e":"metro:bundling:progress","_t":1783093711651,"id":"8","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:done","_t":1783093711990,"id":"8","total":1,"ms":322.1234}
+{"_e":"metro:client_log","_t":1783093713113,"level":"info","data":["%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools","font-weight:bold"]}
+{"_e":"metro:client_log","_t":1783093713115,"level":"warn","data":["[Reanimated] Reduced motion setting is enabled on this device. This warning is visible only in the development mode. Some animations will be disabled by default. You can override the behavior for individual animations, see https://docs.swmansion.com/react-native-reanimated/docs/guides/troubleshooting#reduced-motion-setting-is-enabled-on-this-device."]}
+{"_e":"metro:client_log","_t":1783093713116,"level":"warn","data":["\"shadow*\" style props are deprecated. Use \"boxShadow\"."]}
+{"_e":"metro:client_log","_t":1783093713117,"level":"log","data":["Running application \"main\" with appParams:\n","{\"hydrate\": undefined, \"rootTag\": \"#root\"}","\nDevelopment-level warnings: ON.\nPerformance optimizations: OFF."]}
+{"_e":"metro:client_log","_t":1783093713419,"level":"warn","data":["props.pointerEvents is deprecated. Use style.pointerEvents"]}
+{"_e":"metro:bundling:started","_t":1783093861313,"id":"d","platform":"web","environment":null,"entry":"node_modules\\expo\\AppEntry.js"}
+{"_e":"metro:bundling:progress","_t":1783093861324,"id":"d","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:done","_t":1783093861476,"id":"d","total":1,"ms":163.143}
+{"_e":"metro:client_log","_t":1783093862223,"level":"info","data":["%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools","font-weight:bold"]}
+{"_e":"metro:client_log","_t":1783093862223,"level":"warn","data":["[Reanimated] Reduced motion setting is enabled on this device. This warning is visible only in the development mode. Some animations will be disabled by default. You can override the behavior for individual animations, see https://docs.swmansion.com/react-native-reanimated/docs/guides/troubleshooting#reduced-motion-setting-is-enabled-on-this-device."]}
+{"_e":"metro:client_log","_t":1783093862223,"level":"warn","data":["\"shadow*\" style props are deprecated. Use \"boxShadow\"."]}
+{"_e":"metro:client_log","_t":1783093862223,"level":"log","data":["Running application \"main\" with appParams:\n","{\"hydrate\": undefined, \"rootTag\": \"#root\"}","\nDevelopment-level warnings: ON.\nPerformance optimizations: OFF."]}
+{"_e":"metro:client_log","_t":1783093862540,"level":"warn","data":["props.pointerEvents is deprecated. Use style.pointerEvents"]}
+{"_e":"root:init","_t":1783096568485,"format":"v0-jsonl","version":"56.1.16"}
+{"_e":"env:mode","_t":1783096568487,"nodeEnv":"development","babelEnv":"development","mode":"development"}
+{"_e":"env:load","_t":1783096568491,"mode":"development","files":[],"env":{}}
+{"_e":"devserver:start","_t":1783096569383,"mode":"development","web":true,"baseUrl":"","asyncRoutes":false,"routerRoot":"../..\\..\\src\\app","serverComponents":false,"serverActions":false,"serverRendering":false,"apiRoutes":false,"exporting":false}
+{"_e":"metro:config","_t":1783096570381,"serverRoot":"../..\\..","projectRoot":"../..\\..","exporting":false,"flags":{"autolinkingModuleResolution":false,"serverActions":false,"serverComponents":false,"reactCompiler":true,"optimizeGraph":false,"treeshaking":false,"logbox":false}}
+{"_e":"metro:instantiate","_t":1783096578707,"atlas":false,"workers":4,"host":"::","port":8081}
+{"_e":"metro:bundling:started","_t":1783096732917,"id":"1","platform":"web","environment":null,"entry":"node_modules\\expo\\AppEntry.js"}
+{"_e":"metro:bundling:progress","_t":1783096732917,"id":"1","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1783096732948,"id":"1","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1783096733050,"id":"1","progress":0.09467455621301776,"total":13,"current":4}
+{"_e":"metro:bundling:progress","_t":1783096733153,"id":"1","progress":0.09467455621301776,"total":45,"current":10}
+{"_e":"metro:bundling:progress","_t":1783096733264,"id":"1","progress":0.09467455621301776,"total":106,"current":22}
+{"_e":"metro:bundling:progress","_t":1783096733373,"id":"1","progress":0.1111111111111111,"total":147,"current":49}
+{"_e":"metro:bundling:progress","_t":1783096733474,"id":"1","progress":0.16333324384547235,"total":193,"current":78}
+{"_e":"metro:bundling:progress","_t":1783096733588,"id":"1","progress":0.26538108356290174,"total":231,"current":119}
+{"_e":"metro:bundling:progress","_t":1783096733690,"id":"1","progress":0.31640625,"total":304,"current":171}
+{"_e":"metro:bundling:progress","_t":1783096733790,"id":"1","progress":0.36552245055459315,"total":349,"current":211}
+{"_e":"metro:bundling:progress","_t":1783096733907,"id":"1","progress":0.36552245055459315,"total":389,"current":230}
+{"_e":"metro:bundling:progress","_t":1783096734007,"id":"1","progress":0.3723547999849269,"total":431,"current":263}
+{"_e":"metro:bundling:progress","_t":1783096734109,"id":"1","progress":0.40817901234567894,"total":468,"current":299}
+{"_e":"metro:bundling:progress","_t":1783096734209,"id":"1","progress":0.47745182194288993,"total":521,"current":360}
+{"_e":"metro:bundling:progress","_t":1783096734315,"id":"1","progress":0.636538987866387,"total":554,"current":442}
+{"_e":"metro:bundling:progress","_t":1783096734415,"id":"1","progress":0.636538987866387,"total":638,"current":480}
+{"_e":"metro:bundling:progress","_t":1783096734515,"id":"1","progress":0.6489197530864198,"total":684,"current":551}
+{"_e":"metro:bundling:progress","_t":1783096734616,"id":"1","progress":0.6627771467075624,"total":737,"current":600}
+{"_e":"metro:bundling:progress","_t":1783096734715,"id":"1","progress":0.691891677214261,"total":761,"current":633}
+{"_e":"metro:bundling:progress","_t":1783096734827,"id":"1","progress":0.7542134991820111,"total":783,"current":680}
+{"_e":"metro:bundling:progress","_t":1783096734930,"id":"1","progress":0.7542134991820111,"total":815,"current":701}
+{"_e":"metro:bundling:progress","_t":1783096735030,"id":"1","progress":0.7591015986259744,"total":870,"current":758}
+{"_e":"metro:bundling:progress","_t":1783096735130,"id":"1","progress":0.7905615016642004,"total":902,"current":802}
+{"_e":"metro:bundling:progress","_t":1783096735230,"id":"1","progress":0.9368583602619462,"total":935,"current":905}
+{"_e":"metro:bundling:progress","_t":1783096735330,"id":"1","progress":0.9368583602619462,"total":991,"current":955}
+{"_e":"metro:bundling:progress","_t":1783096735433,"id":"1","progress":0.9376632491038568,"total":1042,"current":1009}
+{"_e":"metro:bundling:progress","_t":1783096735542,"id":"1","progress":0.9980961451247166,"total":1050,"current":1049}
+{"_e":"metro:bundling:progress","_t":1783096735762,"id":"1","progress":0.999,"total":1050,"current":1050}
+{"_e":"metro:bundling:done","_t":1783096735903,"id":"1","total":1050,"ms":2986.1805}
+{"_e":"metro:client_log","_t":1783096736227,"level":"info","data":["%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools","font-weight:bold"]}
+{"_e":"metro:client_log","_t":1783096736228,"level":"warn","data":["[Reanimated] Reduced motion setting is enabled on this device. This warning is visible only in the development mode. Some animations will be disabled by default. You can override the behavior for individual animations, see https://docs.swmansion.com/react-native-reanimated/docs/guides/troubleshooting#reduced-motion-setting-is-enabled-on-this-device."]}
+{"_e":"metro:client_log","_t":1783096736229,"level":"warn","data":["\"shadow*\" style props are deprecated. Use \"boxShadow\"."]}
+{"_e":"metro:client_log","_t":1783096736229,"level":"log","data":["Running application \"main\" with appParams:\n","{\"hydrate\": undefined, \"rootTag\": \"#root\"}","\nDevelopment-level warnings: ON.\nPerformance optimizations: OFF."]}
+{"_e":"metro:client_log","_t":1783096737703,"level":"warn","data":["props.pointerEvents is deprecated. Use style.pointerEvents"]}
