@@ -559,3 +559,102 @@
 {"_e":"metro:client_log","_t":1783091785425,"level":"warn","data":["\"shadow*\" style props are deprecated. Use \"boxShadow\"."]}
 {"_e":"metro:client_log","_t":1783091785426,"level":"log","data":["Running application \"main\" with appParams:\n","{\"hydrate\": undefined, \"rootTag\": \"#root\"}","\nDevelopment-level warnings: ON.\nPerformance optimizations: OFF."]}
 {"_e":"metro:client_log","_t":1783091785877,"level":"warn","data":["props.pointerEvents is deprecated. Use style.pointerEvents"]}
+{"_e":"root:init","_t":1783091906345,"format":"v0-jsonl","version":"56.1.16"}
+{"_e":"env:mode","_t":1783091906348,"nodeEnv":"development","babelEnv":"development","mode":"development"}
+{"_e":"env:load","_t":1783091906353,"mode":"development","files":[],"env":{}}
+{"_e":"devserver:start","_t":1783091907122,"mode":"development","web":true,"baseUrl":"","asyncRoutes":false,"routerRoot":"../..\\..\\src\\app","serverComponents":false,"serverActions":false,"serverRendering":false,"apiRoutes":false,"exporting":false}
+{"_e":"metro:config","_t":1783091907961,"serverRoot":"../..\\..","projectRoot":"../..\\..","exporting":false,"flags":{"autolinkingModuleResolution":false,"serverActions":false,"serverComponents":false,"reactCompiler":true,"optimizeGraph":false,"treeshaking":false,"logbox":false}}
+{"_e":"metro:instantiate","_t":1783091918347,"atlas":false,"workers":4,"host":"::","port":8081}
+{"_e":"metro:bundling:started","_t":1783091994074,"id":"1","platform":"web","environment":null,"entry":"node_modules\\expo\\AppEntry.js"}
+{"_e":"metro:bundling:progress","_t":1783091994075,"id":"1","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1783091994103,"id":"1","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:progress","_t":1783091994220,"id":"1","progress":0.09,"total":7,"current":3}
+{"_e":"metro:bundling:progress","_t":1783091994325,"id":"1","progress":0.140625,"total":16,"current":6}
+{"_e":"metro:bundling:progress","_t":1783091994438,"id":"1","progress":0.140625,"total":43,"current":8}
+{"_e":"metro:bundling:progress","_t":1783091994566,"id":"1","progress":0.140625,"total":47,"current":9}
+{"_e":"metro:bundling:progress","_t":1783091994694,"id":"1","progress":0.140625,"total":75,"current":13}
+{"_e":"metro:bundling:progress","_t":1783091994804,"id":"1","progress":0.140625,"total":83,"current":20}
+{"_e":"metro:bundling:progress","_t":1783091994917,"id":"1","progress":0.140625,"total":97,"current":33}
+{"_e":"metro:bundling:progress","_t":1783091995019,"id":"1","progress":0.140625,"total":117,"current":37}
+{"_e":"metro:bundling:progress","_t":1783091995119,"id":"1","progress":0.140625,"total":129,"current":47}
+{"_e":"metro:bundling:progress","_t":1783091995229,"id":"1","progress":0.140625,"total":141,"current":51}
+{"_e":"metro:bundling:progress","_t":1783091995382,"id":"1","progress":0.140625,"total":182,"current":55}
+{"_e":"metro:bundling:progress","_t":1783091995499,"id":"1","progress":0.140625,"total":184,"current":58}
+{"_e":"metro:bundling:progress","_t":1783091995617,"id":"1","progress":0.140625,"total":184,"current":62}
+{"_e":"metro:bundling:progress","_t":1783091995737,"id":"1","progress":0.140625,"total":184,"current":66}
+{"_e":"metro:bundling:progress","_t":1783091995837,"id":"1","progress":0.15659584203151364,"total":187,"current":74}
+{"_e":"metro:bundling:progress","_t":1783091995938,"id":"1","progress":0.17107535429401605,"total":191,"current":79}
+{"_e":"metro:bundling:progress","_t":1783091996042,"id":"1","progress":0.17107535429401605,"total":209,"current":85}
+{"_e":"metro:bundling:progress","_t":1783091996148,"id":"1","progress":0.2477827160493827,"total":225,"current":112}
+{"_e":"metro:bundling:progress","_t":1783091996251,"id":"1","progress":0.2542917671122799,"total":234,"current":118}
+{"_e":"metro:bundling:progress","_t":1783091996350,"id":"1","progress":0.28001736111111114,"total":240,"current":127}
+{"_e":"metro:bundling:progress","_t":1783091996452,"id":"1","progress":0.3096383975026014,"total":248,"current":138}
+{"_e":"metro:bundling:progress","_t":1783091996567,"id":"1","progress":0.37319262971430306,"total":257,"current":157}
+{"_e":"metro:bundling:progress","_t":1783091996672,"id":"1","progress":0.37319262971430306,"total":296,"current":167}
+{"_e":"metro:bundling:progress","_t":1783091996792,"id":"1","progress":0.37319262971430306,"total":302,"current":176}
+{"_e":"metro:bundling:progress","_t":1783091996899,"id":"1","progress":0.37319262971430306,"total":314,"current":188}
+{"_e":"metro:bundling:progress","_t":1783091996999,"id":"1","progress":0.3745285553642687,"total":317,"current":194}
+{"_e":"metro:bundling:progress","_t":1783091997106,"id":"1","progress":0.3745285553642687,"total":344,"current":204}
+{"_e":"metro:bundling:progress","_t":1783091997208,"id":"1","progress":0.40749859260649285,"total":365,"current":233}
+{"_e":"metro:bundling:progress","_t":1783091997312,"id":"1","progress":0.4432847725459987,"total":383,"current":255}
+{"_e":"metro:bundling:progress","_t":1783091997415,"id":"1","progress":0.4432847725459987,"total":401,"current":264}
+{"_e":"metro:bundling:progress","_t":1783091997521,"id":"1","progress":0.4581757297970809,"total":424,"current":287}
+{"_e":"metro:bundling:progress","_t":1783091997622,"id":"1","progress":0.4581757297970809,"total":438,"current":294}
+{"_e":"metro:bundling:progress","_t":1783091997723,"id":"1","progress":0.4581757297970809,"total":474,"current":305}
+{"_e":"metro:bundling:progress","_t":1783091997845,"id":"1","progress":0.4581757297970809,"total":496,"current":314}
+{"_e":"metro:bundling:progress","_t":1783091997959,"id":"1","progress":0.4581757297970809,"total":496,"current":315}
+{"_e":"metro:bundling:progress","_t":1783091998059,"id":"1","progress":0.4581757297970809,"total":503,"current":322}
+{"_e":"metro:bundling:progress","_t":1783091998165,"id":"1","progress":0.4581757297970809,"total":515,"current":334}
+{"_e":"metro:bundling:progress","_t":1783091998277,"id":"1","progress":0.4581757297970809,"total":518,"current":341}
+{"_e":"metro:bundling:progress","_t":1783091998414,"id":"1","progress":0.4581757297970809,"total":522,"current":349}
+{"_e":"metro:bundling:progress","_t":1783091998644,"id":"1","progress":0.4581757297970809,"total":526,"current":353}
+{"_e":"metro:bundling:progress","_t":1783091998766,"id":"1","progress":0.4581757297970809,"total":556,"current":357}
+{"_e":"metro:bundling:progress","_t":1783091998869,"id":"1","progress":0.4581757297970809,"total":576,"current":361}
+{"_e":"metro:bundling:progress","_t":1783091998970,"id":"1","progress":0.4581757297970809,"total":593,"current":378}
+{"_e":"metro:bundling:progress","_t":1783091999070,"id":"1","progress":0.4736543924930351,"total":603,"current":415}
+{"_e":"metro:bundling:progress","_t":1783091999170,"id":"1","progress":0.552114668073856,"total":611,"current":454}
+{"_e":"metro:bundling:progress","_t":1783091999273,"id":"1","progress":0.5726807888970051,"total":629,"current":476}
+{"_e":"metro:bundling:progress","_t":1783091999377,"id":"1","progress":0.5907975193858263,"total":644,"current":495}
+{"_e":"metro:bundling:progress","_t":1783091999477,"id":"1","progress":0.6044041098017481,"total":647,"current":503}
+{"_e":"metro:bundling:progress","_t":1783091999578,"id":"1","progress":0.6351606978879707,"total":660,"current":526}
+{"_e":"metro:bundling:progress","_t":1783091999681,"id":"1","progress":0.6351606978879707,"total":683,"current":532}
+{"_e":"metro:bundling:progress","_t":1783091999785,"id":"1","progress":0.6351606978879707,"total":708,"current":544}
+{"_e":"metro:bundling:progress","_t":1783091999884,"id":"1","progress":0.6351606978879707,"total":727,"current":564}
+{"_e":"metro:bundling:progress","_t":1783091999984,"id":"1","progress":0.6408746155454029,"total":732,"current":586}
+{"_e":"metro:bundling:progress","_t":1783092000091,"id":"1","progress":0.6494590589040679,"total":747,"current":602}
+{"_e":"metro:bundling:progress","_t":1783092000189,"id":"1","progress":0.6761463177817335,"total":754,"current":620}
+{"_e":"metro:bundling:progress","_t":1783092000291,"id":"1","progress":0.6980755203184968,"total":766,"current":640}
+{"_e":"metro:bundling:progress","_t":1783092000480,"id":"1","progress":0.7002134285484174,"total":772,"current":646}
+{"_e":"metro:bundling:progress","_t":1783092000580,"id":"1","progress":0.7002134285484174,"total":810,"current":675}
+{"_e":"metro:bundling:progress","_t":1783092000683,"id":"1","progress":0.7069887750266118,"total":823,"current":692}
+{"_e":"metro:bundling:progress","_t":1783092000789,"id":"1","progress":0.7267869157911082,"total":834,"current":711}
+{"_e":"metro:bundling:progress","_t":1783092000889,"id":"1","progress":0.7267869157911082,"total":855,"current":728}
+{"_e":"metro:bundling:progress","_t":1783092000997,"id":"1","progress":0.7658755932394647,"total":873,"current":764}
+{"_e":"metro:bundling:progress","_t":1783092001107,"id":"1","progress":0.7748817168511394,"total":877,"current":772}
+{"_e":"metro:bundling:progress","_t":1783092001133,"id":"1","progress":0.7768904826108495,"total":877,"current":773}
+{"_e":"metro:bundling:progress","_t":1783092001244,"id":"1","progress":0.7773662024148345,"total":879,"current":775}
+{"_e":"metro:bundling:progress","_t":1783092001345,"id":"1","progress":0.7851057737489231,"total":904,"current":801}
+{"_e":"metro:bundling:progress","_t":1783092001446,"id":"1","progress":0.8329551305276406,"total":916,"current":836}
+{"_e":"metro:bundling:progress","_t":1783092001545,"id":"1","progress":0.898481681503252,"total":921,"current":873}
+{"_e":"metro:bundling:progress","_t":1783092001646,"id":"1","progress":0.9533469026874688,"total":932,"current":910}
+{"_e":"metro:bundling:progress","_t":1783092001747,"id":"1","progress":0.9533469026874688,"total":949,"current":922}
+{"_e":"metro:bundling:progress","_t":1783092001848,"id":"1","progress":0.9573003467729414,"total":973,"current":952}
+{"_e":"metro:bundling:progress","_t":1783092001951,"id":"1","progress":0.9573003467729414,"total":993,"current":968}
+{"_e":"metro:bundling:progress","_t":1783092002052,"id":"1","progress":0.9573003467729414,"total":1016,"current":974}
+{"_e":"metro:bundling:progress","_t":1783092002153,"id":"1","progress":0.9573003467729414,"total":1036,"current":1004}
+{"_e":"metro:bundling:progress","_t":1783092002256,"id":"1","progress":0.9584559466231573,"total":1048,"current":1026}
+{"_e":"metro:bundling:progress","_t":1783092002382,"id":"1","progress":0.999,"total":1050,"current":1050}
+{"_e":"metro:bundling:done","_t":1783092002658,"id":"1","total":1050,"ms":8583.598}
+{"_e":"metro:client_log","_t":1783092003304,"level":"info","data":["%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools","font-weight:bold"]}
+{"_e":"metro:client_log","_t":1783092003305,"level":"warn","data":["[Reanimated] Reduced motion setting is enabled on this device. This warning is visible only in the development mode. Some animations will be disabled by default. You can override the behavior for individual animations, see https://docs.swmansion.com/react-native-reanimated/docs/guides/troubleshooting#reduced-motion-setting-is-enabled-on-this-device."]}
+{"_e":"metro:client_log","_t":1783092003306,"level":"warn","data":["\"shadow*\" style props are deprecated. Use \"boxShadow\"."]}
+{"_e":"metro:client_log","_t":1783092003306,"level":"log","data":["Running application \"main\" with appParams:\n","{\"hydrate\": undefined, \"rootTag\": \"#root\"}","\nDevelopment-level warnings: ON.\nPerformance optimizations: OFF."]}
+{"_e":"metro:client_log","_t":1783092003560,"level":"warn","data":["props.pointerEvents is deprecated. Use style.pointerEvents"]}
+{"_e":"metro:bundling:started","_t":1783092093575,"id":"5","platform":"web","environment":null,"entry":"node_modules\\expo\\AppEntry.js"}
+{"_e":"metro:bundling:progress","_t":1783092093576,"id":"5","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:done","_t":1783092093715,"id":"5","total":1,"ms":139.0418}
+{"_e":"metro:client_log","_t":1783092094462,"level":"info","data":["%cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools","font-weight:bold"]}
+{"_e":"metro:client_log","_t":1783092094463,"level":"warn","data":["[Reanimated] Reduced motion setting is enabled on this device. This warning is visible only in the development mode. Some animations will be disabled by default. You can override the behavior for individual animations, see https://docs.swmansion.com/react-native-reanimated/docs/guides/troubleshooting#reduced-motion-setting-is-enabled-on-this-device."]}
+{"_e":"metro:client_log","_t":1783092094463,"level":"warn","data":["\"shadow*\" style props are deprecated. Use \"boxShadow\"."]}
+{"_e":"metro:client_log","_t":1783092094463,"level":"log","data":["Running application \"main\" with appParams:\n","{\"hydrate\": undefined, \"rootTag\": \"#root\"}","\nDevelopment-level warnings: ON.\nPerformance optimizations: OFF."]}
+{"_e":"metro:client_log","_t":1783092094806,"level":"warn","data":["props.pointerEvents is deprecated. Use style.pointerEvents"]}

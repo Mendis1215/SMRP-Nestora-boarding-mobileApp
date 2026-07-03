@@ -1,9 +1,13 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { View, Text, StyleSheet, FlatList, TouchableOpacity, Alert, SafeAreaView, ActivityIndicator, Platform } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import { AuthContext } from '../../context/AuthContext';
 import api from '../../services/api';
 
 export default function AnnouncementsScreen() {
+  const { user } = useContext(AuthContext);
+  const hiddenStorageKey = `hiddenAnnouncements_${user?._id || 'guest'}`;
+
   const [announcements, setAnnouncements] = useState([]);
   const [selectedAnnouncement, setSelectedAnnouncement] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
@@ -17,7 +21,7 @@ export default function AnnouncementsScreen() {
       const response = await api.get('/announcements');
       
       // Load hidden IDs
-      const hiddenIdsRaw = await AsyncStorage.getItem('hiddenAnnouncements');
+      const hiddenIdsRaw = await AsyncStorage.getItem(hiddenStorageKey);
       const hiddenIds = hiddenIdsRaw ? JSON.parse(hiddenIdsRaw) : [];
 
       // Filter out hidden ones
@@ -45,11 +49,11 @@ export default function AnnouncementsScreen() {
 
   const executeHide = async (id) => {
     try {
-      const hiddenIdsRaw = await AsyncStorage.getItem('hiddenAnnouncements');
+      const hiddenIdsRaw = await AsyncStorage.getItem(hiddenStorageKey);
       const hiddenIds = hiddenIdsRaw ? JSON.parse(hiddenIdsRaw) : [];
       if (!hiddenIds.includes(id)) {
         hiddenIds.push(id);
-        await AsyncStorage.setItem('hiddenAnnouncements', JSON.stringify(hiddenIds));
+        await AsyncStorage.setItem(hiddenStorageKey, JSON.stringify(hiddenIds));
       }
 
       setAnnouncements(prev => prev.filter(a => a._id !== id));
@@ -85,13 +89,13 @@ export default function AnnouncementsScreen() {
 
   const executeClearAll = async () => {
     try {
-      const hiddenIdsRaw = await AsyncStorage.getItem('hiddenAnnouncements');
+      const hiddenIdsRaw = await AsyncStorage.getItem(hiddenStorageKey);
       const hiddenIds = hiddenIdsRaw ? JSON.parse(hiddenIdsRaw) : [];
       
       const currentIds = announcements.map(a => a._id);
       const newHiddenIds = Array.from(new Set([...hiddenIds, ...currentIds]));
       
-      await AsyncStorage.setItem('hiddenAnnouncements', JSON.stringify(newHiddenIds));
+      await AsyncStorage.setItem(hiddenStorageKey, JSON.stringify(newHiddenIds));
       setAnnouncements([]);
     } catch (err) {
       console.error('Error hiding all announcements:', err);
